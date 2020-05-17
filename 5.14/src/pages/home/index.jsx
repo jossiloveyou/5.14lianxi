@@ -58,7 +58,7 @@ export default class Home extends React.Component{
                 }
               >
                 
-                <Menu.Item key="1"><NavLink to="/home/quan">666</NavLink></Menu.Item>
+                {/* <Menu.Item key="1"><NavLink to="/home/quan">666</NavLink></Menu.Item> */}
                 
               </SubMenu>
               <SubMenu
@@ -96,7 +96,7 @@ export default class Home extends React.Component{
                 title={
                 <span>
                     {/* <AppstoreOutlined /> */}
-                    <span>Chart</span>
+                    <NavLink to="/home/chart"><span>Chart</span></NavLink>
                 </span>
                 }
               >
@@ -127,8 +127,8 @@ export default class Home extends React.Component{
             <Content style={{background:"white"}}>
                 
               <Switch>
-                  <Route path="/home/quan" component={Quan}/>
-                  <Redirect to="/home/quan"/>
+                  <Route path="/home/chart" component={Quan}/>
+                  <Redirect to="/home/chart"/>
               </Switch>
             </Content>
           </Layout>
