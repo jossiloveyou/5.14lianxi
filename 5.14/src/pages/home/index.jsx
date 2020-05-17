@@ -2,7 +2,14 @@ import React from 'react'
 import './style.less'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import { NavLink, Switch, Route, Redirect } from 'react-router-dom'
-import Quan from './comp/Quan'
+
+
+import Chart from './chart'
+import Tables from './Table'
+import Sample from './Sample'
+import Forms from './form'
+
+
 let { Header, Content, Sider } = Layout
 
 // import {AppstoreOutlined, MenuUnfoldOutlined,MenuFoldOutlined,
@@ -86,7 +93,7 @@ export default class Home extends React.Component{
                 title={
                 <span>
                     {/* <AppstoreOutlined /> */}
-                    <span>Form Elememts</span>
+                    <NavLink to="/home/form"><span>Form Elememts</span></NavLink>
                 </span>
                 }
               >
@@ -106,7 +113,7 @@ export default class Home extends React.Component{
                 title={
                 <span>
                     {/* <AppstoreOutlined /> */}
-                    <span>Table</span>
+                    <NavLink to="/home/table"><span>Table</span></NavLink>
                 </span>
                 }
               >
@@ -116,7 +123,7 @@ export default class Home extends React.Component{
                 title={
                 <span>
                     {/* <AppstoreOutlined /> */}
-                    <span>Sample Pages</span>
+                    <NavLink to="/home/sample"><span>Sample Pages</span></NavLink>
                 </span>
                 }
               >
@@ -127,7 +134,10 @@ export default class Home extends React.Component{
             <Content style={{background:"white"}}>
                 
               <Switch>
-                  <Route path="/home/chart" component={Quan}/>
+                  <Route path="/home/chart" component={Chart}/>
+                  <Route path="/home/table" component={Tables}/>
+                  <Route path="/home/sample" component={Sample}/>
+                  <Route path="/home/form" component={Forms}/>
                   <Redirect to="/home/chart"/>
               </Switch>
             </Content>
