@@ -1,7 +1,7 @@
 import _ from 'loadsh'
 
 const data={
-  name:'lx',age:18,data:{},count:0,obj:{name:"666"}
+  name:'lx',age:18,data:[],count:0,obj:{name:"666"}
 }
 
 export default function (state = data, action) {
