@@ -5,8 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Router from '@/router'
 
+import { Provider } from 'react-redux'
+import { store } from './store'
+
 ReactDOM.render(
-  <Router/>,
+  <Provider store={store}>
+    <Router/>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

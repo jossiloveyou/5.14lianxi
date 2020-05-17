@@ -55,10 +55,10 @@ class Forms extends React.Component {
     const { getFieldDecorator } = this.props.form
 
     return (
-        <div className="login">
+        <div className="form">
             {/* <p style={{textAlign:"center",lineHeight:"10px",fontSize:"18px",fontWeight:"900"}}>登录</p> */}
-            <p>Basic Form</p>
-            <p>Basic form elements</p>
+            <p style={{fontSize:"30px",fontWeight:"900",color:"black"}}>Basic Form</p>
+            <p style={{fontSize:"15px",fontWeight:"900"}}>Basic form elements</p>
             <Form onSubmit={this.handleSubmit}>
                 <Form.Item label="Name">
                 {getFieldDecorator('Name', {

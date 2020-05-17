@@ -1,6 +1,7 @@
 import React from 'react'
 import echarts from 'echarts'
 
+import './style.less'
 export default class Chart extends React.Component{
   componentDidMount () {
     var myChart = echarts.init(this.el);
@@ -81,6 +82,9 @@ export default class Chart extends React.Component{
     };
     window.addEventListener('resize',() => {
         myChart.resize()
+        myChart2.resize()
+        myChart3.resize()
+        myChart4.resize()
     })
     myChart.setOption(option);
     myChart2.setOption(option2);

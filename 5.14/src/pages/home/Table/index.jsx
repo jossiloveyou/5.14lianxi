@@ -61,8 +61,9 @@ export default class Tables extends React.Component{
           {
             typeof(data)=="object"?
             <Table
-              dataSource={data} 
               rowKey={v=>v.id} 
+              dataSource={data} 
+              
               columns={columes}
               pagination={{pageSize:5}}
             />:null
